@@ -1,0 +1,84 @@
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+ padding: 40px;
+}
+
+.grid {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+ 
+}
+
+/* .grid-item { 
+   transition: background-color 0.3s ease-in-out; 
+  
+} */
+
+.grid-item:hover {
+  background-color: gray;
+  
+
+}
+
+.grid-item:active {
+  background-color: yellow;
+}
+
+.slider {
+  -webkit-appearance: none; /* remove the default appearance */
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px 0;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* remove the default appearance */
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* .grid-row {
+  display: flex;
+}
+.grid-cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+} */
+
+.gridRow {
+  border: 1px solid black;
+}
+
+.cell {
+  border: 1px solid gray;
+  min-width: 10px;
+  min-height: 20px;
+  display: inline-block;
+}
